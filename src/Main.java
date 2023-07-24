@@ -10,7 +10,7 @@ class Application {
         int serverPort = 8000;
         HttpServer server = HttpServer.create(new InetSocketAddress(serverPort), 0);
         server.createContext("/api/hello", (exchange -> {
-            String respText = "NIGA!!!";
+            String respText = "Hello!!!";
             exchange.sendResponseHeaders(200, respText.getBytes().length);
             OutputStream output = exchange.getResponseBody();
             output.write(respText.getBytes());
